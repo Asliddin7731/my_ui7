@@ -182,6 +182,7 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: MediaQuery.of(context).size.width,
                             child:GridView.count(
+                              childAspectRatio: 1.1/1,
                               scrollDirection: Axis.horizontal,
                               crossAxisSpacing: 5,
                               mainAxisSpacing: 5,
