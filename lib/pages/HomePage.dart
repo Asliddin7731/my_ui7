@@ -199,7 +199,46 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
 
-                    const SizedBox(height: 40,),
+                    const SizedBox(height: 8),
+
+                    //Top shopping
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      color: CupertinoColors.white,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Top products in Camera',
+                            style: TextStyle(color: CupertinoColors.black, fontSize: 18),
+                          ),
+                          const SizedBox(height: 15),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.width,
+                            child:GridView.count(
+                              childAspectRatio: 1/1.85,
+                              scrollDirection: Axis.horizontal,
+                              crossAxisSpacing: 5,
+                              mainAxisSpacing: 5,
+                              crossAxisCount: 2,
+                              children: [
+                                const Image(image: AssetImage('assets/images/item_7.jpeg'),fit: BoxFit.cover,),
+                                GridView.count(
+                                  mainAxisSpacing: 5,
+                                  childAspectRatio: 1.1,
+                                  crossAxisCount: 1,
+                                  scrollDirection: Axis.horizontal,
+                                  children: const [Image(image: AssetImage('assets/images/item_3.jpeg'), fit: BoxFit.cover,),
+                                    Image(image: AssetImage('assets/images/item_2.jpeg'), fit: BoxFit.cover,),],
+                                ),
+
+                              ],
+                            ) ,
+                          )
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 10,),
                   ],
                 ),
             )
